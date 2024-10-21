@@ -9,10 +9,10 @@ const db = new Low(adapter, defaultData);
 import express from 'express';
 let app = express();
 
-let port = process.env.PORT || 3000;
-app.listen(port, () => {
-console.log('listening at ', port);
-});
+// let port = process.env.PORT || 3000;
+// app.listen(port, () => {
+// console.log('listening at ', port);
+// });
 
 
 // app.get('/',(req,res)=>{
@@ -46,9 +46,11 @@ app.post('/new-data', (req,res)=>{
 
 app.use('/',express.static('public'));
 
-app.listen(3000,()=>{
-    console.log('listening at localhost:3000');
-})
+let port = process.env.PORT || 3000;
+app.listen(port, () => {
+console.log('listening at ', port);
+});
+
 
 app.get('/data',(req,res)=>{
     // let obj = {data: moodTracker};
@@ -62,9 +64,6 @@ app.get('/data',(req,res)=>{
 
     // res.json(obj);
 })
-
-process.env.API-KEY
-process.env.MONGODB-URL
 
 
 
