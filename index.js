@@ -9,6 +9,11 @@ const db = new Low(adapter, defaultData);
 import express from 'express';
 let app = express();
 
+let port = process.env.PORT || 3000;
+app.listen(port, () => {
+console.log('listening at ', port);
+});
+
 
 // app.get('/',(req,res)=>{
 //     res.send('This is the main page');
@@ -57,6 +62,11 @@ app.get('/data',(req,res)=>{
 
     // res.json(obj);
 })
+
+process.env.API-KEY
+process.env.MONGODB-URL
+
+
 
 // db.read()
 //     .then(() => {
